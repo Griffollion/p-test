@@ -1,0 +1,111 @@
+.modal {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+
+
+	background: rgba(34, 34, 34, 0.7);
+	backdrop-filter: blur(10px);
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s;
+}
+
+.modal.active {
+	transform: scale(1);
+	pointer-events: auto;
+	opacity: 1;
+
+}
+
+.modal-dialog {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	max-width: 100%;
+	max-height: calc(100vh - 40px);
+	margin: 0 24px 0 24px;
+
+	text-align: left;
+	transform: scale(0);
+	transition: transform .3s;
+}
+
+.modal.active .modal-dialog {
+	transform: scale(1);
+}
+
+.modal-dialog.s {
+	width: 424px;
+}
+
+.modal-dialog.m {
+	width: 640px;
+}
+
+.modal-dialog.l {
+	width: 940px;
+}
+
+.modal-content {
+	position: relative;
+
+	overflow: hidden;
+
+	border-radius: 16px;
+	background: white;
+
+	padding: 40px 20px;
+}
+
+.modal-close {
+	position: absolute;
+	z-index: 5;
+	top: -20px;
+	right: -20px;
+	background-color: var(--dark-blue);
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	line-height: 1;
+
+	cursor: pointer;
+}
+
+.modal-body {
+	overflow: auto;
+}
+
+.modal-title {
+	margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+	.full-height .modal-dialog {
+		height: calc(100vh - 40px);
+	}
+
+	.modal-content {
+		height: 100%;
+		overflow: auto;
+	}
+}
+

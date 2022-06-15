@@ -1,0 +1,27 @@
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.grid {
+    display: grid;
+    grid-gap: 40px 40px;
+    grid-template-columns: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

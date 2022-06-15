@@ -1,0 +1,51 @@
+.section {
+
+}
+
+.s {
+
+}
+
+.m {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+}
+
+.l {
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.xl {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.indent-bottom {
+    padding-bottom: 0 !important;
+}
+
+.indent-top {
+    padding-top: 0 !important;
+}
+
+.bg-white {
+    background: var(--white);
+}
+
+.bg-blue {
+    background: var(--blue) !important;
+}
+
+.bg-light-pink {
+    background: var(--light-pink);
+}
+
+.bg-gradient-1 {
+    background: var(--gradient-1);
+}
+
+.bg-transparent {
+    background: transparent;
+}

@@ -1,0 +1,64 @@
+.button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 4px;
+    text-align: center;
+    font-family: inherit;
+    transition: filter .25s ease-in;
+    display: inline-block;
+}
+
+.block {
+    width: 100%;
+}
+
+.button:active {
+    filter: brightness(0.9);
+}
+
+@media screen and (hover: hover) {
+    .button:hover {
+        filter: brightness(1.1);
+    }
+}
+
+
+/*appearance*/
+.primary {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.primary-2 {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+/*appearance //end*/
+
+/*size*/
+/*TODO: пока определен только m size, остальные определятся со временем*/
+.s {
+    padding: 14px 28px;
+    font-size: 18px;
+}
+
+.m {
+    padding: 14px 28px;
+    font-size: 18px;
+}
+
+.l {
+    padding: 19px 32px;
+    font-size: 18px;
+}
+
+.xl {
+    padding: 19px 32px;
+    font-size: 18px;
+}
+/*size //end*/

@@ -1,0 +1,22 @@
+.container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+}
+
+.s {
+    width: 620px;
+}
+
+.m {
+    width: 920px;
+}
+
+.l {
+    width: 1220px;
+}
+
+.xl {
+    width: 1620px;
+}

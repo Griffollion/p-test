@@ -1,0 +1,15 @@
+:root {
+	--gray: #5E6771;
+	--dark-blue: #1C376E;
+	--primary-blue: #14509C;
+	--white: #fff;
+	--neitral: #f3f3f3;
+	--blue: #1C54C5;
+	--orange: #FC7318;
+	--light-pink: #EFF2F5;
+	--gradient-1: linear-gradient(180deg, #F0F4FC 0%, #FFFFFF 100%);
+	--default-fz: 14px;
+	--an-default: .25s ease-in;
+	--z-index-modal: 100;
+	--z-index-menu: 99;
+}

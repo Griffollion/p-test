@@ -1,0 +1,31 @@
+.h1,.h2, .h3, .h4, .h5 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.h1 {
+    font-size: 34px;
+}
+
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/*colors*/
+.inherit {
+    color: inherit;
+}
+
+.white {
+    color: var(--white);
+}
+/*colors //end*/

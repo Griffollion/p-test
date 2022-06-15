@@ -1,0 +1,7 @@
+export {default as Container} from './Container/Container'
+export {default as Htag} from './Htag/Htag'
+export {default as Ptag} from './Ptag/Ptag'
+export {default as Section} from './Section/Section'
+export {default as Button} from './Button/Button'
+export {default as Logo} from './Logo/Logo'
+export {default as Modal} from './Modal/Modal'

@@ -1,0 +1,13 @@
+
+
+.input {
+	width: 100%;
+	margin: 0;
+	padding: 11px 14px;
+
+	border: 1px solid #ebebeb;
+	border-radius: 8px;
+	outline: none;
+	display: block;
+}
+
