@@ -1,12 +1,13 @@
 import cn from "classnames"
 import {ModalProps} from "./Modal.props";
 import styles from './Modal.module.css'
+import {useSelector} from "react-redux";
 
-const Modal = ({active, setActive, children, size}: ModalProps): JSX.Element => {
-    console.log(active)
+const Modal = ({ setActive, children, size}: ModalProps): JSX.Element => {
+    const isModalActive = useSelector(state => state.modal.modal.isActive)
     return (
         <div className={cn(styles.modal, {
-            [styles.active]: active
+            [styles.active]: isModalActive
         })} onClick={() => setActive(false)}>
             <div className={cn(styles["modal-dialog"], {
                 [styles['s']]: size === 's',

@@ -10,9 +10,12 @@ import {
 } from "../components";
 
 import {withLayout} from "../layout/Layout";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import dynamic from 'next/dynamic'
 import useOnScreen from "../hooks/useOnScreen";
+import {useDispatch, useSelector} from "react-redux";
+import {toggleModal} from "../store/modalSlice";
+
 
 const DynamicComponent1 = dynamic(() => import('../blocks/Pr/Pr'))
 
@@ -24,11 +27,11 @@ function Home({products, menu, social}) {
     const DynamicComponent3RefValue = useOnScreen(DynamicComponent3Ref);
     const DynamicComponent4Ref = useRef();
     const DynamicComponent4RefValue = useOnScreen(DynamicComponent4Ref);
-const xx= () => {
-    setModalActive(true)
-}
+    const dispatch = useDispatch()
 
-    const [modalActive, setModalActive] = useState(false)
+    const xx= () => {
+        dispatch(toggleModal())
+    }
     return (
         <>
             <div className={styles.wrapper}>
@@ -43,19 +46,11 @@ const xx= () => {
                     <div ref={DynamicComponent4Ref}>
                         {DynamicComponent4RefValue && <DynamicComponent1 callback={xx} id="3" items={products.products}/>}
                     </div>
-                    {/*<DynamicComponent1 items={products.products}/>*/}
-                    {/*{products.products.map(product => <Product key={product.id + 2} data={product} onClick={() => setModalActive(true)}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id + 3} data={product} onClick={() => setModalActive(true)}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+4} data={product}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+5} data={product}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+6} data={product}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+7} data={product}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+8} data={product}/>)}*/}
-                    {/*{products.products.map(product => <Product key={product.id+9} data={product}/>)}*/}
+
                 </Container>
             </div>
 
-            <Modal size="m" active={modalActive} setActive={setModalActive}>
+            <Modal size="m" setActive={xx} >
                 <RequestForm/>
             </Modal>
         </>

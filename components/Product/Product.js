@@ -13,6 +13,8 @@ export const Product = ({data, ...props}) => {
         dispatch(getOrder(data))
         props.onClick()
     }
+
+    console.log('Rerender Product')
     return (
         <div className={cn(styles['product'])}>
             <div className={styles['image']}>
