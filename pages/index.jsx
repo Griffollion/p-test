@@ -17,10 +17,6 @@ import useOnScreen from "../hooks/useOnScreen";
 const DynamicComponent1 = dynamic(() => import('../blocks/Pr/Pr'))
 
 
-
-
-
-
 function Home({products, menu, social}) {
     const DynamicComponent2Ref = useRef();
     const DynamicComponent2RefValue = useOnScreen(DynamicComponent2Ref);
