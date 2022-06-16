@@ -24,8 +24,8 @@ function Home({products, menu, social}) {
                     <div className={styles.grid}>
                         {products.products.map(product => <Product key={product.id} data={product} onClick={() => setModalActive(true)}/>)}
                         {products.products.map(product => <Product key={product.id + 1} data={product} onClick={() => setModalActive(true)}/>)}
-                        {products.products.map(product => <Product key={product.id + 2} data={product} onClick={() => setModalActive(true)}/>)}
-                        {products.products.map(product => <Product key={product.id + 3} data={product} onClick={() => setModalActive(true)}/>)}
+                        {/*{products.products.map(product => <Product key={product.id + 2} data={product} onClick={() => setModalActive(true)}/>)}*/}
+                        {/*{products.products.map(product => <Product key={product.id + 3} data={product} onClick={() => setModalActive(true)}/>)}*/}
                     </div>
                     {/*{products.products.map(product => <Product key={product.id+4} data={product}/>)}*/}
                     {/*{products.products.map(product => <Product key={product.id+5} data={product}/>)}*/}
