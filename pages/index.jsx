@@ -24,22 +24,24 @@ function Home({products, menu, social}) {
     const DynamicComponent3RefValue = useOnScreen(DynamicComponent3Ref);
     const DynamicComponent4Ref = useRef();
     const DynamicComponent4RefValue = useOnScreen(DynamicComponent4Ref);
-
+const xx= () => {
+    setModalActive(true)
+}
 
     const [modalActive, setModalActive] = useState(false)
     return (
         <>
             <div className={styles.wrapper}>
                 <Container size="xl">
-                    <DynamicComponent1 items={products.products}/>
+                    <DynamicComponent1 callback={xx} id="0" items={products.products}/>
                     <div ref={DynamicComponent2Ref}>
-                        {DynamicComponent2RefValue && <DynamicComponent1 items={products.products}/>}
+                        {DynamicComponent2RefValue && <DynamicComponent1 callback={xx} id="1" items={products.products}/>}
                     </div>
                     <div ref={DynamicComponent3Ref}>
-                        {DynamicComponent3RefValue && <DynamicComponent1 items={products.products}/>}
+                        {DynamicComponent3RefValue && <DynamicComponent1 callback={xx} id="2" items={products.products}/>}
                     </div>
                     <div ref={DynamicComponent4Ref}>
-                        {DynamicComponent4RefValue && <DynamicComponent1 items={products.products}/>}
+                        {DynamicComponent4RefValue && <DynamicComponent1 callback={xx} id="3" items={products.products}/>}
                     </div>
                     {/*<DynamicComponent1 items={products.products}/>*/}
                     {/*{products.products.map(product => <Product key={product.id + 2} data={product} onClick={() => setModalActive(true)}/>)}*/}
