@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import cn from 'classnames'
 
 import {LayoutProps} from "./Layout.props";
@@ -9,11 +10,13 @@ import {FunctionComponent} from "react";
 import {AppContextProvider, IAppContext} from "../context/app.context";
 
 
-export const Layout = ({children}:LayoutProps): JSX.Element => {
+export const Layout = ({children}: LayoutProps): JSX.Element => {
     return (
         <>
             <Head>
                 <title>Test</title>
+
+
             </Head>
             <div className={'root-container'}>
                 <Header/>
@@ -25,14 +28,10 @@ export const Layout = ({children}:LayoutProps): JSX.Element => {
     )
 }
 
-export const withLayout = <T extends Record<string, unknown>& IAppContext> (Component:FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
         return (
-            <AppContextProvider menu={props.menu}>
-                <Layout>
-                    <Component {...props} />
-                </Layout>
-            </AppContextProvider>
+            <AppContextProvider menu={props.menu}> <Layout> <Component {...props} /> </Layout> </AppContextProvider>
         )
     }
 }
