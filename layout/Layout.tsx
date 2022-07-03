@@ -15,8 +15,7 @@ export const Layout = ({children}: LayoutProps): JSX.Element => {
         <>
             <Head>
                 <title>Test</title>
-
-
+                <script>window.yaContextCb = window.yaContextCb || []</script>
             </Head>
             <div className={'root-container'}>
                 <Header/>
