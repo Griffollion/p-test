@@ -1,27 +1,24 @@
-// @ts-nocheck
 import Head from 'next/head'
 import Script from 'next/script'
 import cn from 'classnames'
 
-import { LayoutProps } from "./Layout.props";
+import {LayoutProps} from "./Layout.props";
 import styles from './Layout.module.css'
-import { Header } from "./Header/Header";
-import { Footer } from "./Footer/Footer";
-import { FunctionComponent } from "react";
-import { AppContextProvider, IAppContext } from "../context/app.context";
-import { YMInitializer } from 'react-yandex-metrika';
+import {Header} from "./Header/Header";
+import {Footer} from "./Footer/Footer";
+import {FunctionComponent} from "react";
+import {AppContextProvider, IAppContext} from "../context/app.context";
 
 
-export const Layout = ({ children }: LayoutProps): JSX.Element => {
+export const Layout = ({children}: LayoutProps): JSX.Element => {
     return (
         <>
             <Head>
                 <title>Test</title>
                 <script>window.yaContextCb = window.yaContextCb || []</script>
-                <YMInitializer accounts={[90053236]} options={{ webvisor: true }} version="2" />
             </Head>
             <div className={'root-container'}>
-                <Header />
+                <Header/>
                 <main>
                     {children}
                 </main>
