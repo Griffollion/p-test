@@ -33,6 +33,7 @@
     "react-redux": "^7.2.5",
     "react-spring": "^9.3.0",
     "react-use": "^17.4.0",
+    "react-yandex-metrika": "^2.6.0",
     "ua-parser-js": "^0.7.28",
     "uuid": "^8.3.2"
   },
